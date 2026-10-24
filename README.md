@@ -429,15 +429,15 @@ docker compose up -d
 
 ## Deploying to Kubernetes
 
-Kubernetes manifests using this container image, along with a helm chart, are available from the following repository:
-[https://github.com/Addyvan/valheim-k8s](https://github.com/Addyvan/valheim-k8s)
+A modern Helm chart configured for this container image is available at:
+[https://github.com/evilhamsterman/valheim-k8s](https://github.com/evilhamsterman/valheim-k8s)
 
-The chart is also available directly using:
+*(Note: The original chart at [Addyvan/valheim-k8s](https://github.com/Addyvan/valheim-k8s) is unmaintained. The fork above modernizes the deployment to conform with current Kubernetes and Helm best practices, including StatefulSet architecture to avoid RWO volume multi-attach issues, container health probes, integrated backup volume management, and OCI distribution).*
+
+The chart can be installed directly from GitHub Container Registry (OCI):
 
 ```bash
-helm repo add valheim-k8s https://addyvan.github.io/valheim-k8s/
-helm repo update
-helm install valheim-server valheim-k8s/valheim-k8s # see repo for full config
+helm install valheim-server oci://ghcr.io/evilhamsterman/valheim-k8s --version 3.0.0 # see repo for full config
 ```
 
 ## Deploying to AWS ECS
