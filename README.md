@@ -435,7 +435,7 @@ A Helm chart configured for this container image is available at:
 The chart can be installed directly from GitHub Container Registry (OCI):
 
 ```bash
-helm install valheim-server oci://ghcr.io/evilhamsterman/valheim-k8s --version 3.0.0 # see repo for full config
+helm install valheim-server oci://ghcr.io/evilhamsterman/valheim-k8s # see repo for full config
 ```
 
 ## Deploying to AWS ECS
