@@ -429,10 +429,8 @@ docker compose up -d
 
 ## Deploying to Kubernetes
 
-A modern Helm chart configured for this container image is available at:
+A Helm chart configured for this container image is available at:
 [https://github.com/evilhamsterman/valheim-k8s](https://github.com/evilhamsterman/valheim-k8s)
-
-*(Note: The original chart at [Addyvan/valheim-k8s](https://github.com/Addyvan/valheim-k8s) is unmaintained. The fork above modernizes the deployment to conform with current Kubernetes and Helm best practices, including StatefulSet architecture to avoid RWO volume multi-attach issues, container health probes, integrated backup volume management, and OCI distribution).*
 
 The chart can be installed directly from GitHub Container Registry (OCI):
 
